@@ -82,8 +82,8 @@
                 <groupId>org.asyncapitools</groupId>
                 <artifactId>asyncapi-generator-maven-plugin</artifactId>
                 <configuration>
-                    <inputSpec>src/main/resources/asyncapi.yaml</inputSpec>
-                    <output>target/generated-sources/asyncapi/</output>
+                    <inputSpec>${project.basedir}/src/main/resources/asyncapi.yaml</inputSpec>
+                    <output>${project.basedir}/target/generated-sources/asyncapi/</output>
                     <packageName>me.abratuhi.asyncapitools</packageName>
                     <language>Java</language>
                     <library>quarkus</library>
@@ -110,7 +110,7 @@
                         </goals>
                         <configuration>
                             <sources>
-                                <source>target/generated-sources/asyncapi/src/gen/java</source>
+                                <source>${project.basedir}/target/generated-sources/asyncapi/src/gen/java</source>
                             </sources>
                         </configuration>
                     </execution>
