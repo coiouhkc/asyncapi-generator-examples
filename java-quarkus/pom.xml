@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.example</groupId>
         <artifactId>asyncapi-generator-examples</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>java-quarkus</artifactId>
@@ -73,7 +73,7 @@
                 <plugin>
                     <groupId>org.asyncapitools</groupId>
                     <artifactId>asyncapi-generator-maven-plugin</artifactId>
-                    <version>1.0.0-SNAPSHOT</version>
+                    <version>0.1.0-SNAPSHOT</version>
                 </plugin>
             </plugins>
         </pluginManagement>
