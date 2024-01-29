@@ -86,7 +86,7 @@
                 <plugin>
                     <groupId>org.asyncapitools</groupId>
                     <artifactId>asyncapi-generator-maven-plugin</artifactId>
-                    <version>0.1.0-SNAPSHOT</version>
+                    <version>${asyncapi-generator-maven-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

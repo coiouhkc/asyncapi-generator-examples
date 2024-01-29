@@ -1,0 +1,58 @@
+asyncapi: '2.6.0'
+info:
+  title: Test API
+  version: '1.0.0'
+  description: |
+    The Test API allows to test asyncapi generator
+  license:
+    name: Apache 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0'
+
+servers:
+  production:
+    url: kafka:9092
+    protocol: kafka
+
+channels:
+  in:
+    subscribe:
+      operationId: read
+      message:
+        payload:
+          $ref: "#/components/schemas/TestPayload"
+        bindings:
+          kafka:
+            key:
+              $ref: "#/components/schemas/TestKey"
+  out:
+    publish:
+      operationId: write
+      message:
+        payload:
+          $ref: "#/components/schemas/TestPayload"
+        bindings:
+          kafka:
+            key:
+              $ref: "#/components/schemas/TestKey"
+components:
+  schemas:
+    TestKey:
+      type: object
+      properties:
+        key:
+          type: string
+    TestPayload:
+      type: object
+      properties:
+        prop1:
+          type: integer
+          minimum: 0
+        prop2:
+          type: string
+          format: date-time
+        prop3:
+          type: number
+          format: double
+        prop4:
+          type: string
+          enum: [THIS, THAT]
